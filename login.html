@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf6f2">
+    <title>تسجيل الدخول | Nails By Donia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <main class="login-page">
+        <a class="home-link" href="index.html">العودة إلى الرئيسية</a>
+
+        <section class="login-card" aria-labelledby="login-title">
+            <a class="brand" href="index.html" aria-label="Nails By Donia - الصفحة الرئيسية">
+                <span class="brand-name">Nails By Donia</span>
+                <span class="brand-caption">BEAUTY IN EVERY DETAIL</span>
+            </a>
+
+            <div class="login-heading">
+                <p class="eyebrow">مرحباً بعودتك</p>
+                <h1 id="login-title">تسجيل الدخول</h1>
+                <p>سجّلي الدخول لمتابعة تجربتك معنا.</p>
+            </div>
+
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="name@example.com"
+                           autocomplete="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" name="password"
+                           placeholder="أدخلي كلمة المرور"
+                           autocomplete="current-password" required>
+                </div>
+
+                <button type="submit" class="login-button">تسجيل الدخول</button>
+            </form>
+
+            <p class="footer-link">
+                ليس لديك حساب؟
+                <a href="signin.html">أنشئي حساباً جديداً</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

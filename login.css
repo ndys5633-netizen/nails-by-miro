@@ -1,0 +1,238 @@
+:root {
+    font-family: "Cairo", Arial, sans-serif;
+    color: #503c39;
+    background: #faf6f2;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.login-page {
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    overflow: hidden;
+    padding: 72px 24px;
+    background:
+        radial-gradient(ellipse at 10% 12%, rgba(193, 139, 148, 0.16), transparent 34%),
+        radial-gradient(ellipse at 90% 88%, rgba(116, 61, 76, 0.09), transparent 36%),
+        #faf6f2;
+}
+
+.login-page::before,
+.login-page::after {
+    position: absolute;
+    z-index: 0;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(156, 98, 110, 0.12);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.login-page::before {
+    top: -150px;
+    right: -90px;
+}
+
+.login-page::after {
+    bottom: -170px;
+    left: -100px;
+    width: 320px;
+    height: 320px;
+}
+
+.home-link {
+    position: absolute;
+    top: 28px;
+    right: max(24px, calc((100vw - 1080px) / 2));
+    z-index: 1;
+    color: #743d4c;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.home-link:hover,
+.footer-link a:hover {
+    color: #9c626e;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.login-card {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 440px);
+    padding: 42px 44px 36px;
+    border: 1px solid rgba(233, 220, 213, 0.9);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 24px 70px rgba(80, 60, 57, 0.11);
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 36px;
+    color: #743d4c;
+    text-decoration: none;
+}
+
+.brand-name {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.brand-caption {
+    margin-top: 3px;
+    color: #927e79;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.login-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 6px;
+    color: #9c626e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0;
+    color: #503c39;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.login-heading > p:last-child {
+    margin: 8px 0 0;
+    color: #927e79;
+    font-size: 13px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 19px;
+}
+
+.input-group label {
+    color: #503c39;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.input-group input {
+    width: 100%;
+    min-height: 50px;
+    padding: 11px 14px;
+    border: 1px solid #e9dcd5;
+    border-radius: 10px;
+    outline: none;
+    background: #fffdfa;
+    color: #503c39;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #aa9b97;
+}
+
+.input-group input:focus {
+    border-color: #9c626e;
+    box-shadow: 0 0 0 3px rgba(156, 98, 110, 0.13);
+}
+
+.login-button {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 10px;
+    background: #743d4c;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    transform: translateY(-1px);
+    background: #5e303d;
+}
+
+.login-button:focus-visible,
+.home-link:focus-visible,
+.brand:focus-visible,
+.footer-link a:focus-visible {
+    outline: 3px solid rgba(156, 98, 110, 0.55);
+    outline-offset: 3px;
+}
+
+.footer-link {
+    margin: 25px 0 0;
+    color: #927e79;
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer-link a {
+    color: #743d4c;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .login-page {
+        padding: 72px 16px 32px;
+    }
+
+    .login-card {
+        padding: 34px 24px 29px;
+    }
+
+    .brand {
+        margin-bottom: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
